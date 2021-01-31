@@ -6,9 +6,9 @@ export default Layout;
 export interface Props {}
 
 export function Layout(props: PropsWithChildren<Props>) {
-    return <>
-        <BottomAppBar>
-            {props.children}
-        </BottomAppBar>
+  return (
+    <>
+      <BottomAppBar>{props.children}</BottomAppBar>
     </>
+  );
 }

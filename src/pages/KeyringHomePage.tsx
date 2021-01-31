@@ -8,17 +8,19 @@ import Layout from "../layouts/KeyringAppLayout";
 export default KeyringHomePage;
 
 export type KeyringHomePageProps = {
-    initialKeys: Key[],
-    user: User,
-}
+  initialKeys: Key[];
+  user: User;
+};
 
 export function KeyringHomePage(props: KeyringHomePageProps) {
-    const [user, setUser] = useState<User>(AnonymousUser);
-    const [keys, setKeys] = useState<Key[]>(props.initialKeys);
-    return <>
-        <Layout>
-            <T variant="h2">Keyring</T>
-            <KeyList keys={keys} user={user} />
-        </Layout>
+  const [user, setUser] = useState<User>(AnonymousUser);
+  const [keys, setKeys] = useState<Key[]>(props.initialKeys);
+  return (
+    <>
+      <Layout>
+        <T variant="h2">Keyring</T>
+        <KeyList keys={keys} user={user} />
+      </Layout>
     </>
+  );
 }

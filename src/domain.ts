@@ -1,13 +1,13 @@
 // like 'problem domain'. basically the types that describe a 'keyring' app
 
 export type Key = {
-    name: string
-}
+  name: string;
+};
 
 export type User = {
-  name: string
+  name: string;
 };
 
 export const AnonymousUser = {
-  name: 'Anonymous',
-}
+  name: "Anonymous",
+};
