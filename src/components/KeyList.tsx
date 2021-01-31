@@ -1,5 +1,8 @@
+import { Typography } from "@material-ui/core";
 import * as React from "react";
 import { Key, User } from "../domain";
+import Button from "./Button";
+
 export default KeyList;
 
 export type KeyListProps = {
@@ -14,7 +17,10 @@ export function KeyList(props: KeyListProps) {
         <ul>
         {props.keys.map(
             (key) => <li>
-                {key.name || 'nameless key'}
+                <Typography>{key.name || 'nameless key'}</Typography>
+                <div>
+                    <Button>Key Button</Button>
+                </div>
             </li>
         )}
         </ul>
