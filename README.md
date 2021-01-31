@@ -1,6 +1,20 @@
-# Getting Started with Create React App
+# keyring
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modest app to keep track of your digital [keys](https://en.wikipedia.org/wiki/Diffie%E2%80%93Hellman_key_exchange).
+
+Why do you want keys? Well keys limit [privilege](https://en.wikipedia.org/wiki/Principle_of_least_privilege). But many keys are just really large random numbers. How do we make sense of them all? Use this app.
+
+What's an example of a key? You can use `ssh-keygen` to create an ed25519 key. That key can then identify you whenever you use ssh to connect to a server. That same key can also identify you to other decentralized systems.
+
+## User Stories
+
+* [x] I can see a list of my keys, so I can find the one I want
+  * [x] I can see a name for each key.
+* [ ] I can add a new key, so I can keep it safe and come find it later.
+  * [ ] I can add a name to the key.
+  * [ ] The key has an ed25519 keyPair persisted with it
+* [ ] I can publish my public key, so others know I exist
+  * [ ] I can POST this as a well-defined message to an arbitrary HTTP endpoint
 
 ## Available Scripts
 
@@ -28,19 +42,3 @@ The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
