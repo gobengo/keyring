@@ -1,6 +1,7 @@
 import { Typography } from "@material-ui/core";
 import * as React from "react";
 import { Key, User } from "../domain";
+import { makeLog } from "../log";
 import Button from "./Button";
 
 export default KeyList;
@@ -25,10 +26,4 @@ export function KeyList(props: KeyListProps) {
         )}
         </ul>
     </>
-}
-
-function makeLog(name: string) {
-    return (level: 'debug', ...loggables: any[]) => {
-        console[level](`[${name}]`, ...loggables)
-    }
 }
